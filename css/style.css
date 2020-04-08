@@ -67,10 +67,12 @@ p {
 
 .section-1{
 	background-color: rgb(166, 122, 68);
+	padding-top:3.125rem;
 }
 
 .section-2{
 	background-color: rgb(223, 223, 223);
+	padding-top:3.125rem;
 }
 
 .small-img{
