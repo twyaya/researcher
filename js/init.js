@@ -107,7 +107,7 @@ const Home = {
 					<p>自駕車事故頻頻發生，背後隱藏著什麼樣的危機?</p>
 				</article>
 				<div class="right-align">
-					<a class="waves-effect waves-light btn-large" >閱讀內容</a>
+					<a class="waves-effect waves-light btn-large" href="AUTO.html">閱讀內容</a>
 				</div>
 				
 				<div class="chip chip-two">
