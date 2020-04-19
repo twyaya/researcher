@@ -1,11 +1,9 @@
-$(document).ready(
-function(){
+
+$(document).ready(function(){
     $('.carousel').carousel();
 	$('.button-collapse').sideNav();
 	$('.parallax').parallax();
 });
-
-
 
 const Home = {
 	template: `<div>
@@ -157,8 +155,10 @@ const Questionnaire_content = {
 }
 
 const Article = {
-	template: `<div> </div>`
+	template: '<h1>自動駕駛車引發法律風暴——探討我國對自動駕駛車的法規規範</h1>'
 }
+
+
 
 const routes = [
 	{
@@ -182,17 +182,17 @@ const router = new VueRouter({
 	routes
 })
 
-vm = new Vue({
+        new Vue({
             el: '#app',
             router,
             data: {
                 Home: '首頁',
                 Features: '特色',
                 Pricing: '價格',
-                Disabled: '停用',
+                Disabled: '停用'
             }
-    })
-	
+        })
+
 	var options = {
 	  strings: ['我們是兩個高中生組成的團隊。'],
 	  typeSpeed: 70
@@ -211,7 +211,5 @@ vm = new Vue({
 	    scrollContainer: null 
 	  }
 	);
-	
-	
 	
 	wow2.init();

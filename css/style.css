@@ -14,19 +14,6 @@ p{
 	font-size: 1.25rem;
 }
 
-	
-#Introduction{
-	color: white;
-	padding: 2.1875rem;
-}
-	
-
-#in{
-	border-color: rgb(255, 250, 212) transparent rgb(255, 250, 212) transparent;
-	border-width:2px;
-	border-style:solid;
-}
-
 nav ul a,
 nav .brand-logo {
   color: #444;
