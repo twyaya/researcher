@@ -137,15 +137,58 @@
 		
 	</style>
 	<body>
+		<ul id="dropdown1" class="dropdown-content">
+		  <li><a href="#!">網路公審與霸凌</a></li>
+		  <li class="divider"></li>
+		  <li><a href="#!">自駕車事故</a></li>
+		  <li class="divider"></li>
+		  <li><a href="#!">居住正義	</a></li>
+		  <li class="divider"></li>
+		  <li><a href="#!">假訊息</a></li>
+		</ul>
+		
+		<nav class="white" role="navigation">
+		 <div class="nav-wrapper container">
+		   <a id="logo-container" class="brand-logo center" href="index.html">Searchers</a>
+			        <ul id="nav-mobile" class="left hide-on-med-and-down">
+			          <li><a href="#" @click="$router.push('articles')">關於我們</a></li>
+			          <li><a href="#" @click="$router.push('reference')">引用資料</a></li>
+			          <li><a href="https://twyaya.github.io/self-driving-cars/" >問卷內容</a></li>
+			        </ul>
+					<ul class="right hide-on-med-and-down">
+							<li><a class="dropdown-button" href="#!" data-activates="dropdown1">專題<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+		    </div>
+		 </nav>
+		 
+		<div style="border:5px #FFAC55 solid;">
+	
 		<div id="app" class="container">
 			 <div class="row">
 				 
 			    <div class="col s12 m9 l10">
 			      <div id="introduction" class="section scrollspy">
 			        <h3>自動駕駛車引發法律風暴——探討我國對自動駕駛車的法規規範</h3>
+					  <div class="chip chip-two">
+					    科技
+					  </div>
+					  
+					    <div class="fixed-action-btn horizontal click-to-toggle">
+					      <a class="btn-floating btn-large red">
+					        <i class="material-icons">menu</i>
+					      </a>
+					      <ul>
+					        <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+					        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+					        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+					        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+					      </ul>
+					    </div>
+					  
+					<hr>
 			        <p>人工智慧在近年蓬勃發展，也逐漸進入現代人的日常生活中，有越來越多的人開始對於此技術的發展感到好奇，但大部分的人並未因此去研究關於這項技術發展下所造成的社會問題，例如：特斯拉電動休旅車的自動輔助駕駛技術、Google自動駕駛車的自動駕駛技術在使用過程中造成意外事故的案件，這兩起事故引起了我們對於自動駕駛技術所適用法規及各個國家因應制度的好奇。
 			        </p>
-					
+	
 			      </div>
 				  <section style="background-color: #a67a44;margin-top: 4.2rem;">
 				  	<div class="container" data-aos="fade-up">	
@@ -222,7 +265,38 @@
 			    </div>
 			  </div>
 		</div>
-
+		
+		</div>
+		
+			<footer class="page-footer teal">
+			    <div class="container">
+			      <div class="row">
+			        <div class="col l6 s12">
+			          <h5 class="white-text">Searcher team</h5>
+			          <p class="grey-text text-lighten-4">We are not only high school students but also researchers.</p>
+			
+			        </div>
+					
+			        <div class="col l3 s12">
+			          <h5 class="white-text">研究者資訊</h5>
+			          <ul>
+			            <li><a class="white-text" href="#!">無松瑞 信箱 </a></li>
+			          </ul>
+					  <ul>
+					    <li><a class="white-text" href="#!">十三 信箱 ssss.gladmasy@gmail.com</a></li>
+					  </ul>
+			        </div>
+			      </div>
+			    </div>
+			
+					
+			    <div class="footer-copyright">
+			      <div class="container"><a class="brown-text text-lighten-3" href=""><img src="images/facebook.png" ></a>
+			      </div>
+			    </div>
+			  </footer>
+			</div>
+			
 		
 		<script src="https://unpkg.com/vue/dist/vue.js"></script>
 		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
@@ -234,10 +308,11 @@
 		<script type="text/javascript">
 			var active = false;
 			
+			
 			$(document).ready(function(){
 			  $("#more").click(function(){
 			    $("#in").toggle();
-				
+				$(".dropdown-button").dropdown();
 				if (!active) {
 					anime({
 					  targets: '#more',
