@@ -179,10 +179,13 @@
 							<li><a class="dropdown-button" href="#!" data-activates="dropdown1">專題<i class="material-icons right">arrow_drop_down</i></a></li>
 					</ul>
 		    </div>
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div>	
 		 </nav>
 		 
-		<div style="border:5px #FFAC55 solid;">
-	
+		
+		<br><br>
 		<div  id="app" class="container">
 			 <div class="row">
 				 
@@ -397,7 +400,7 @@
 			  </div>
 		</div>
 		
-		</div>
+		
 		
 			<footer class="page-footer teal">
 			    <div class="container">
@@ -438,7 +441,14 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 		<script type="text/javascript">
 			var active = false;
+			window.onscroll = function() {myFunction()};
 			
+			function myFunction() {
+			  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+			  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+			  var scrolled = (winScroll / height) * 100;
+			  document.getElementById("myBar").style.width = scrolled + "%";
+			}
 			
 			$(document).ready(function(){
 			  $("#more").click(function(){
