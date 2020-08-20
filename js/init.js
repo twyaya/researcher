@@ -28,7 +28,7 @@ const Home = {
 					<p>在網路世界中的司法體制，其背後潛藏著什麼樣的人性?</p>
 				</article>
 				<div class="right-align">
-					<a class="waves-effect waves-light btn-large">閱讀內容</a>
+					<a class="waves-effect waves-light btn-large" href="Bully.html">閱讀內容</a>
 				</div>
 				
 				<div class="chip chip-one">

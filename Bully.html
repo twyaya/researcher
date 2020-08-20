@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<title>另一個世界的司法體制─全民網路公審與霸凌</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+		 crossorigin="anonymous">
+		</link>
+	</head>
+	<style type="text/css">
+		body {
+			font-family: 'Noto Sans TC', sans-serif;
+		}
+
+
+		p {
+			font-size: 1.25rem;
+			line-height: 2rem;
+		}
+
+		nav ul a,
+		nav .brand-logo {
+			color: #444;
+		}
+
+		.button-collapse {
+			color: #26a69a;
+		}
+
+		#in {
+			border-color: rgb(255, 250, 212) transparent rgb(255, 250, 212) transparent;
+			border-width: 2px;
+			border-style: solid;
+		}
+
+		#Introduction {
+			color: white;
+			padding: 2.1875rem;
+		}
+
+		#type-text {
+			display: inline;
+		}
+
+		.typed-cursor {
+			font-size: 2.25rem;
+		}
+
+		.parallax-container {
+			min-height: 380px;
+			line-height: 0;
+			height: auto;
+			color: rgba(255, 255, 255, .9);
+		}
+
+		.parallax-container .section {
+			width: 100%;
+		}
+
+		@media only screen and (max-width : 992px) {
+			.parallax-container .section {
+				position: absolute;
+				top: 40%;
+			}
+
+			#index-banner .section {
+				top: 10%;
+			}
+		}
+
+		@media only screen and (max-width : 600px) {
+			#index-banner .section {
+				top: 0;
+			}
+		}
+
+		.icon-block {
+			padding: 0 15px;
+		}
+
+		.icon-block .material-icons {
+			font-size: inherit;
+		}
+
+
+		.carousel-item {
+			width: 450px !important;
+		}
+
+		.section-1 {
+			background-color: rgb(166, 122, 68);
+			padding-top: 3.125rem;
+		}
+
+		.section-2 {
+			background-color: rgb(223, 223, 223);
+			padding-top: 3.125rem;
+		}
+
+		.small-img {
+			max-width: 31.25rem;
+		}
+
+		footer.page-footer {
+			margin: 0;
+		}
+
+		.chip-two {
+			background-color: #a67a44;
+		}
+
+		.chip-one {
+			background-color: #dfdfdf;
+		}
+
+		.typing {
+			font-size: 1rem;
+			padding-top: 6%;
+			margin-bottom: 5%;
+			font-weight: normal;
+			letter-spacing: .3rem;
+			-webkit-animation: type 2s steps(50, end) forwards;
+			animation: type 2s steps(50, end) forwards;
+		}
+
+		.typing-item {
+			text-align: center;
+			color: black;
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+		@-webkit-keyframes type {
+			from {
+				width: 0;
+			}
+		}
+
+		@keyframes type {
+			from {
+				width: 0;
+			}
+		}
+
+		.fontSIZE:link,
+		.fontSIZE:visited {
+			display: inline-block;
+			text-decoration: none;
+			text-align: center;
+			height: 30px;
+			width: 30px;
+			color: black;
+			background-color: white;
+			border: 1px solid green;
+		}
+
+		.fontSIZE:hover,
+		.fontSIZE:active {
+			color: white;
+			background-color: green;
+		}
+	</style>
+	<body>
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="#!">網路公審與霸凌</a></li>
+			<li class="divider"></li>
+			<li><a href="#!">自駕車事故</a></li>
+			<li class="divider"></li>
+			<li><a href="#!">居住正義 </a></li>
+			<li class="divider"></li>
+			<li><a href="#!">假訊息</a></li>
+		</ul>
+
+		<nav class="white" role="navigation">
+			<div class="nav-wrapper container">
+				<a id="logo-container" class="brand-logo center" href="index.html">Researchers</a>
+				<ul id="nav-mobile" class="left hide-on-med-and-down">
+					<li><a href="#" @click="$router.push('articles')">關於我們</a></li>
+					<li><a href="#" @click="$router.push('reference')">引用資料</a></li>
+					<li><a href="https://twyaya.github.io/self-driving-cars/">問卷內容</a></li>
+				</ul>
+				<ul class="right hide-on-med-and-down">
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">專題<i class="material-icons right">arrow_drop_down</i></a></li>
+				</ul>
+			</div>
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div>
+		</nav>
+
+
+		<br><br>
+		<div id="app" class="container">
+			<div class="row">
+
+				<div class="col s12 m9 l10">
+					<div id="introduction" class="section scrollspy">
+						<h3>另一個世界的司法體制─全民網路公審與霸凌</h3>
+						<br>
+						<div class="chip chip-two">
+							法律
+						</div>
+
+						<div class="actor right">
+							<div>
+								<a class="fontSIZE waves-effect waves-light btn" herf='#' @click='decreasefontsize'>A-</a>
+								<a class="fontSIZE waves-effect waves-light btn" herf='#' @click='increasefontsize'>A+</a>
+							</div>
+							<i>作者:十三、無松瑞</i>
+						</div>
+
+						<div class="fixed-action-btn toolbar">
+							<a class="btn-floating btn-large red">
+								<i class="large material-icons">menu</i>
+							</a>
+							<ul>
+								<li class="waves-effect waves-light">
+									<div class="fb-share-button" data-href="https://twyaya.github.io/resercher/Fakenews.html" data-layout="button_count"
+									 data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftwyaya.github.io%2Fresercher%2FFakenews.html&amp;src=sdkpreparse"
+										 class="fb-xfbml-parse-ignore"><i class="fas fa-share-square"></i></a></div>
+								</li>
+								<li class="waves-effect waves-light green"><a href="#!"><i class="fas fa-share-square"></i></a></li>
+								<li class="waves-effect waves-light red"><a href="#!"><i class="material-icons">publish</i></a></li>
+								<li class="waves-effect waves-light yellow"><a href="#!"><i class="material-icons">attach_file</i></a></li>
+							</ul>
+						</div>
+					</div>
+					<p>
+						<hr>
+
+						<div v-bind:style='fontStyle'>
+
+							<div id="R1" class="mb-0 section scrollspy">
+								<div>
+
+
+									<p v-bind:style='fontStyle'>網路對於現代人來說可以是一個不會受到拘束世界，
+										但這個世界也因為無拘無束，而帶來許多災難，其中最令人恐懼的即是網路霸凌及網路公審，自以為是的人們將自己當成正義使者，肆意妄為的破壞社會秩序，為了研究此現象，撰寫此論文。</p>
+									<h4>一、案例研究</h4>
+									<br>
+									<h5>（一）雪莉自殺事件</h5>
+									<h5>1、事故概況:</h5>
+									<p v-bind:style='fontStyle'>知名韓國女團f(X)前隊員崔雪莉，被發現在家自殺身亡，經紀人在當天晚上與她最後通話後就和雪莉失去聯絡，一直到隔日下午 16:30
+										左右到她位於的公寓內探訪才發現她已經在家中 2
+										樓利用繩子綁在電燈上自縊身亡。根據警方表示，當救護車抵達現場時，雪莉的身體已經呈現僵硬狀態並失去了生命跡象，在確認雪莉死亡後，警方才正式展開死因的調查。而雪莉所屬的經紀公司也正式發布聲明，證實了旗下藝人雪莉的死訊。(風傳媒，2019)</p>
+
+									<h5>2、原因分析:</h5>
+									<p v-bind:style='fontStyle'>雪莉在退出f(X)後，環境和身旁的人對她的看法發生很大的變化，在IG所發布的照片、影像等，觸犯了許多關注者的底線，將她批評成脫序的瘋女人，人容易將公眾人物及心中偶像的行為放大解釋，當然也有忌妒對方的可能性，所以再加上韓國文化要求的一致性、完美性，對於她擅自「
+										退出f(X)」感到不滿，再接上幾個不顧形象的貼文，引起了長期的攻擊性言論，雪莉承受不了自殺身亡。(中時電子報，2019)</p>
+
+									<h5>（二）世新大學霸凌事件 </h5>
+									<br>
+									<h5>1、事故概況：</h5>
+									<p v-bind:style='fontStyle'>世新大學一名男大生在臉書PO出一段69秒鐘的影片，控訴自己在宿舍慘遭罷凌的遭遇，一名穿著黑衣的學生闖進宿舍房間，不斷言語攻擊原PO，還用歧視性的字眼嗆聲「像個娘娘腔一樣活著啊」、「性騷擾，我覺得你現在在性騷擾，請你穿上褲子」，甚至還要摸他下體，影片曝光後立刻引起網友公憤，霸凌男的全家都被肉搜。(ETtoday，2019)</p>
+									<h5>原因分析:</h5>
+									<p v-bind:style='fontStyle'>我國在葉永誌事件後開始重視性平教育的重要性，推動性別平等教育法、多元性別教育等，從性別認同和教育的變革下，性別歧視和性別偏見逐漸減少，只不過在想言語攻擊他人的時候，還是會成為別人口中的惡意言論，對某些人來說就像自身的人格遭受污辱，是不可被觸碰的底線，大學方應該加強男大生的性別平等素養。</p>
+								</div>
+							</div>
+						</div>
+
+
+						<div id="R2" class="section scrollspy">
+							<h4>三、各國的網路文化與社會環境</h4>
+							<br>
+							<h5>（一）韓國網路文化與社會環境</h5>
+							<p v-bind:style='fontStyle'>韓國的網路上有許多近似我國PTT的論壇，只是這些論壇並沒有被謹慎管理，政治立場、偶像崇拜、品牌信仰等，都有不同的立場差異，尤其是演藝界的競爭非常的激烈，所以惡性鬥爭嚴重到每個演藝人員都要巨大的壓力、偶像包袱，現實社會的南韓是講非常講究社會地位、名聲，近似於菁英主義的社會氛圍，可見這樣的高壓社會下，人民的不滿的情緒就可能發洩在這些藝人上，從中抒發壓力，部分的人是為了尋求其他網友的認同，以便一起攻擊特定對象。</p>
+						</div>
+
+						<div class="row">
+							<div class="col s12 m6">
+								<div class="card">
+									<div class="card-image">
+										<img class="materialboxed" src="images/擷取.PNG" >
+									</div>
+									<div class="card-content">
+										<p>2016年1月到2019年1月南韓失業率</p>
+									</div>
+									<div class="card-action">
+										<a href="#">資料來源:STOCK-AI</a>
+									</div>
+								</div>
+							</div>
+							<div class="col s12 m6">
+								<div class="card">
+									<div class="card-image">
+										<img class="materialboxed" src="images/p.png" >
+									</div>
+									<div class="card-content">
+										<p>南韓自殺率</p>
+									</div>
+									<div class="card-action">
+										<a href="#">資料來源:CUP</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="R3" class="section scrollspy">
+							<h4>（二）台灣網路文化與社會環境</h4>
+							<br>
+							<h5>1.台灣的網路文化</h5>
+							<p v-bind:style='fontStyle'>台灣的最知名的網路論壇是PTT，此論壇將許多的話題分類成各種討論版，其中以感情、商業等主題的討論板，最容易有所謂的公審文的發生，畢竟這些議題最容易掀起爭端，況且大多數的網友很喜歡看戲或帶風向，導致事實的真相難以釐清，這是匿名暴力的展現，雖然只要有網友對留言進行檢舉，負責該版的版主或管理員會進行審理決定是否刪除文章，但是以網路消息傳播速度，一起事件的內容很快就會透過其他網路媒體散播出去，除此之外「正義魔人」也是社會變遷下的產物，做出自己所認為正義的舉動，去肉搜、潑漆、辱罵對方，幾乎扭曲了世人的價值觀。</p>
+							<h5>2.台灣的社會環境</h5>
+							<p v-bind:style='fontStyle'>台灣的社會並沒有向南韓一樣重視菁英主義，但我國的失業率和高房價卻和其他經濟高度發展的國家不分上下，造成青年對於自身未來感到憂鬱，進而影響社會造成少子化、高齡化，壓力的累積及社會對新一代年輕人的輕視和不滿，企業給與不合理的待遇，導致社會新人犧牲生活品質，無處宣洩的情緒，只好發洩在網路論壇上。</p>
+							<div class="row">
+								<div class="col s12 m6">
+									<div class="card">
+										<div class="card-image">
+											<img class="materialboxed" src="images/unnamed%20(2).png" >
+										</div>
+										<div class="card-content">
+											<p>2016年1月到2019年1月台灣失業率 </p>
+										</div>
+										<div class="card-action">
+											<a href="#">資料來源:STOCK-AI</a>
+										</div>
+									</div>
+								</div>
+								<div class="col s12 m6">
+									<div class="card">
+										<div class="card-image">
+											<img class="materialboxed" src="images/unnamed%20(1).png" >
+										</div>
+										<div class="card-content">
+											<p>台灣房價指數</p>
+										</div>
+										<div class="card-action">
+											<a href="#">資料來源:STOCK-AI</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						</div>
+
+
+						<div id="R4" class="section scrollspy">
+							<h5>四、網路公審的起因與影響</h5>
+							<p>1.網路公審的起因</p>
+							<p v-bind:style='fontStyle'>研究者認為會造成網路公審現象的起因主要是以下幾種:</p>
+							<p v-bind:style='fontStyle'>A.社會環境惡劣，失業率高、物價高、工作壓力大，無處抒發情緒</p>
+							<p v-bind:style='fontStyle'>B.民眾網路素養不足，容易因為情緒激動就說出惡意言論</p>
+							<p v-bind:style='fontStyle'>C.判斷力和查證能力嚴重缺乏</p>
+							<p v-bind:style='fontStyle'>在上述的情形中最能夠從個人改變進而影響的是第三項，網路上過度自由的風氣會讓許多的網友，以為自身的行為不用付出任何的責任，再加上「匿名性」所帶來加劇的暴力，只要在網路上發幾篇真實性不明的文章、照片，就能對想要攻擊的對象，造成嚴重影響，有網友因此去詳細調查被害者身世背景、住址等個人隱私資料，也就是所謂的「肉搜」，霸凌者只要能夠操縱網路輿論方向，被害者就失去與網路上人們溝通的機會。</p>
+							<h5>2.最可能的攻擊對象</h5>
+							<p v-bind:style='fontStyle'>
+								言論可以對目標造成最大傷害的是名譽，而模特兒、演藝人員、國內知名企業等，都是重視外在的名聲和觀感，所以一旦最做出不受到大眾認同的舉動，很可能成為攻擊對象，例如以下幾項話題對我國的社會有爭議性:同性婚姻、國籍認同、反送終運動等，只要擅自發表個人意見，都會引起很大的社會反應，嚴重到多數的公眾人物對這些話題不發表任何立場，算是網路上的白色恐怖。</p>
+							<h5>3.網路公審的影響</h5>
+							<p v-bind:style='fontStyle'>先將攻擊對象的事蹟公布，例如:違法攀爬公共設施、劈腿男、女友、言語辱罵他人等，再敘述其對某事物、人物的看法，還有與其他人的聊天紀錄，最後再加上只有單方面說法的描述，各種無法透過查證言論及圖像，在網友的傳播下很快就上該論壇的熱門話題，為了要加重對方的生活影響，很多網友還會貼上攻擊對象的個人資料，讓受害者的個人隱私和人身安全受到嚴重威脅。</p>
+							<p v-bind:style='fontStyle'>在知名的社會心理學實驗「權力服從研究」中，證實了人容易在特定的環境壓力下，聽從他人的指令，只要從中獲得的利益，此現象可以解釋網路上的跟隨「領袖」的情形，另一項實驗「阿希從眾實驗」中，則證明網路上的從眾效應，只要有人帶起網路公審的風向，其他網友也容易會跟著盲目跟隨，甚至加油添醋。</p>
+						</div>
+
+						<div id="R5" class="section scrollspy">
+							<h5>五、為何要使用網路公審的方式報復探討:</h5>
+							<p v-bind:style='fontStyle'>在這個人人都有手機、電腦的時代，利用網路的方便性、快速傳播性、匿名性，攻擊者的特點有以下幾種:</p>
+							<p v-bind:style='fontStyle'>經過綜合比較及討論後，我對於台灣假訊息與假新聞的問題改善提供的建議如下：</p>
+							<p v-bind:style='fontStyle'>1.追求匿名的功能(使用有匿名發文機制的軟體、網路論壇)</p>
+							<p v-bind:style='fontStyle'>2.追求快速傳播(有機制可使發文更容易被看見 例如:網站有熱門貼文排行和貼文顯示在顯眼處)</p>
+							<p v-bind:style='fontStyle'>3.尋求其他人共同攻擊目標或認同立場(使用有近似立場或同年齡使用者的軟體
+								例如:年輕族群常使用的Dcard、Instagram，敏感議題的利用:國家認同、種族議題、性別教育)</p>
+							<p v-bind:style='fontStyle'>針對第一點的原因分析是攻擊者當然會希望自已不會透漏身分以便可以用各種帳號去進行言論攻擊，即便後面被發現是說不實言論，也只是承受被刪文的結果，更可以降低被害人對他進行肉搜的風險，第二點是利用所有人心中想看好戲的心態，也許有多人是抱持查證的心態去發言，但也是因此讓這則貼文吸引到更多的關注，攻擊者反而得逞，第三點是在網上最為嚴重的現象，並竟很多人都懂向接近相同立場的團體進行發言或行動比較容易獲得支持，現在網路同溫層的凝聚力及封閉性過大，使理性具同理心的發言逐漸減少，不被重視。</p>
+							<p v-bind:style='fontStyle'>在我國最容易受到操控或攻擊立場的議題:</p>
+							<p v-bind:style='fontStyle'>1.國家認同</p>
+							<p v-bind:style='fontStyle'>2.政治立場(支持的政黨、候選人)</p>
+							<p v-bind:style='fontStyle'>3.性別立場(近似於網路上所說的「戰男女」)</p>
+							<p v-bind:style='fontStyle'>4.性別教育</p>
+							<p v-bind:style='fontStyle'>5.公眾人物的醜聞</p>
+						</div>
+						<div id="R6" class="section scrollspy">
+								<h5>六、傳統形式的霸凌與新型的霸凌</h5>
+								<p v-bind:style='fontStyle'>1.言語霸凌:藉由嘲諷 羞辱被害者相關心理特徵、隨意散佈不實謠言等。</p>
+								<p v-bind:style='fontStyle'>2.肢體霸凌:藉由脅迫、恐嚇、肢體攻擊等身體暴力方式，對被害者攻擊。</p>
+								<p v-bind:style='fontStyle'>3.關係霸凌:藉由操縱社交關係的方式，威脅、鼓吹、利誘他人排擠受害者，妨礙被害者進行社交活動。</p>
+								<p v-bind:style='fontStyle'>言語、關係霸凌的霸凌方式皆可透過文字
+									圖片的由網路的協助下實現，其中言語霸凌在日常生活中最常出現，關係霸凌的特點是出現的場合最多，連政治界都有用此方法攻擊其他政敵，肢體霸凌是最明顯違反法律底線的方式，大多數的網路霸凌無法做到這點但即使言語攻擊和不實資訊的散佈就能造成極大的傷害，時代的變遷下連霸凌他人的方式也更進一步了，原本作為時代最重要的技術「網際網路」成為另一個價值觀扭曲的世界，可能也透露的人類在現實社會上潛藏的本性。</p>
+								<p v-bind:style='fontStyle'>匿名性的特質傳達了，人如果能不用為自己的行為負責，將會有甚麼後果。
+									曝光性的特質傳達了，訊息的傳播速度快速和人類的好奇心。
+									立場優勢性證實了，霸凌者利用他人偏見及同情心去攻擊被害人的方式。
+								</p>
+							<div class="row">
+								<div class="col s12 m6">
+									<div class="card">
+										<div class="card-image">
+											<img class="materialboxed" src="images/unnamed%20(4).png" >
+										</div>
+										<div class="card-content">
+											<p>網路霸凌者追求的性質</p>
+										</div>
+										<div class="card-action">
+											<a href="#">資料來源:研究者</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="R7" class="section scrollspy">
+							<h5>( 一 )網路使用的主要群體及網路霸凌情形</h5>
+							<p v-bind:style='fontStyle'>想要改變現在的網路風氣，從年輕一代的網路使用者開始，最有效果，因為大部分會長期使用網路的群體，是15到30歲之間的用戶，而群體之中青少年的網路使用最容易因教育和制度而改變。</p>
+							<p v-bind:style='fontStyle'>從圖七中可以看到12到19歲的青少年，遭受網路霸凌的現象最為嚴重，網路的使用平均時數高達兩小時以上，減少網路的使用與養成青少年使用網路習慣的課題，是改善網路霸凌和公審的主要目標。</p>
+							<div class="row">
+								<div class="col s12 m6">
+									<div class="card">
+										<div class="card-image">
+											<img class="materialboxed" src="images/unnamed%20(3).png" >
+										</div>
+										<div class="card-content">
+											<p>各網路世代網路族遭網路霸凌情形</p>
+										</div>
+										<div class="card-action">
+											<a href="#">資料來源:國發會、聯合晚報</a>
+										</div>
+									</div>
+								</div>
+								<div class="col s12 m6">
+									<div class="card">
+										<div class="card-image">
+											<img class="materialboxed" src="images/pasted%20image%200%20(2).png" >
+										</div>
+										<div class="card-content">
+											<p>國小、國中、高中職網路使用時數調查</p>
+										</div>
+										<div class="card-action">
+											<a href="#">資料來源:教育部</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h5>( 二 )網路霸凌及公審違反相關法規探討</h5>
+							<p v-bind:style='fontStyle'>網路霸凌的起因，是因為網路霸凌所帶來的效果，在他們眼裡很有用，必須讓攻擊者
+								負起法律責任，帶來殺雞儆猴的效果，使用法律責任懲罰霸凌者就是好的做法，網路霸凌可能觸犯的法條有:中華民國刑法第 305 條、妨害名譽及信用罪第309條、310條、312條、313條等，違反個人資料保護法第20條規定。
+							</p>
+							<span style="font-style:italic;color:#cb8c1e">
+								<p v-bind:style='fontStyle'>妨害名譽及信用罪 第309條</p>
+								公然侮辱人者，處拘役或三百元以下罰金。
+								以強暴犯前項之罪者，處一年以下有期徒刑、拘役或五百元以下罰金。
+							</span><br>
+							<span style="font-style:italic;color:#cb8c1e">
+								<p v-bind:style='fontStyle'>刑法 第310條</p>
+								意圖散布於眾，而指摘或傳述足以毀損他人名譽之事者，為誹謗罪，處一年以下有期徒刑、拘役或五百元以下罰金。
+								散布文字、圖畫犯前項之罪者，處二年以下有期徒刑、拘役或一千元以下罰金。
+								對於所誹謗之事，能證明其為真實者，不罰。但涉於私德而與公共利益無關者，不在此限。<br>
+							</span><br>
+							<span style="font-style:italic;color:#cb8c1e">
+								<p v-bind:style='fontStyle'>刑法 第312條</p>
+								對於已死之人公然侮辱者，處拘役或三百元以下罰金。
+								對於已死之人犯誹謗罪者，處一年以下有期徒刑、拘役或一千元以下罰金。
+							</span><br>
+							<span style="font-style:italic;color:#cb8c1e">
+								<p v-bind:style='fontStyle'>個人資料保護法 第 20 條</p>
+								非公務機關對個人資料之利用，除第六條第一項所規定資料外，應於蒐集之特定目的必要範圍內為之。但有下列情形之一者，得為特定目的外之利用。
+								(節錄部分內容)
+							</span><br>
+						</div>
+						<div id="R8" class="section scrollspy">
+								<h5>八、被霸凌者的心理分析</h5>
+								<p v-bind:style='fontStyle'>部分的被霸凌在脫離環境後，還會有不適應的心理問題，說起來矛盾其實多數的人在關係霸凌的迫害下，會產生以下的想法:</p>
+								<p v-bind:style='fontStyle'>1.應該是我有做錯什麼?</p>
+								<p v-bind:style='fontStyle'>2.我不是被霸凌者</p>
+								<p v-bind:style='fontStyle'>3.嘗試忘記這部分的記憶</p>
+								<p v-bind:style='fontStyle'>4.反社會思想</p>
+								<p v-bind:style='fontStyle'>這明確的反應人的自我安慰心理及被霸凌者弱勢並且試圖逃避、忘卻不堪的回憶(嘗試找出被霸凌的理由)，但也顯現人的溫柔及非暴力報復的心理，霸凌者認為被霸凌者的心態大都抱持「自己也有錯的態度」(自我安慰)，直到離開環境並遺忘、淡去過去的記憶，更嚴重的情況可能造成被霸凌者的反社會思想與憂鬱症</p>
+								<p v-bind:style='fontStyle'>應該要正當的實施網路使用教育和言論禮儀，現在風氣已經很難改變，還是從下一代的教育做起避免以後再發生同樣的問題，減少清少年和網友在網路上言語攻擊他人的案例，父母也該對孩子多加溝通，讓學生人際交流、升學壓力等有抒發的機會，還有減少使用限制的方法改以理解的方法勸導減少網路使用時數，多去參加室外活動增進心理健康與人際關係，此方法也能解決青少年的憂鬱症、自閉症等其他心理問題，畢竟環境改變不易，心態和價值觀的建立是決定的關鍵。</p>
+								<p v-bind:style='fontStyle'>自從網路普及化後，人們獲得完成各項工作、行動的便利性，卻也承受了後果，從利用網際網路工具到自身被網路綁架的現象，在青少年中群體最為嚴重，父母、老師的人格素養教育何時被網路所取代?孩子已經有多久沒有親自面對面跟身旁的人吃飯、聊天，甚至是一起去看電影、運動？必須要記住的是，人與人之間要建立起正確的溝通方式，並且端正自己的網路素養，即便很難快速改善整體的網路環境，重點是必須讓民眾知道有人跟自己一樣在關注這個問題，進而引起社會的反饋。</p>
+							<div class="row">	
+								<div class="col s12 m6">
+									<div class="card">
+										<div class="card-image">
+											<img class="materialboxed" src="images/pasted%20image%200%20(1).png" >
+										</div>
+										<div class="card-content">
+											<p>青少年自殺死亡率趨勢圖</p>
+										</div>
+										<div class="card-action">
+											<a href="#">資料來源:親子天下、衛生福利部統計處</a>
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						
+						<div id="R9" class="section scrollspy">
+							<h4>參、結論</h4>
+							<p v-bind:style='fontStyle'>網路的使用早已成為人類的重要生活文化及活動，必須改變已扭曲的網路使用價值觀，重新導正不良的言論風氣，對於民眾實施正確網路使用教育，避免成為脫離現實、秩序混亂的另一個世界。</p>
+							<p v-bind:style='fontStyle'>經過綜合比較及討論後，我對於台灣網路霸凌及公審的問題改善提供的建議如下： </p>
+							<p v-bind:style='fontStyle'>一、開設青少年心理輔導課程及發行預防網路霸凌教育手冊。</p>
+							<p v-bind:style='fontStyle'>二、將網路霸凌的處理方法及要負起的責任，透過新聞媒體、報紙專欄進行宣傳。</p>
+							<p v-bind:style='fontStyle'>三、各大網路論壇應建立起不當文章、言論審查機制且幫助網友和用戶釐清事實。</p>
+							<p v-bind:style='fontStyle'>四、建議國、高中學校應開設法律、政策議題探討課程，推動教育政策提升學生法律素養及參與政策改革或提供意見。</p>
+							<p v-bind:style='fontStyle'>五、成年人進行網路公審的原因大都是報復他人與展現自己認為的正義，生活壓力也是導火線之一，使其他網友跟著附和。</p>
+						</div>
+				</div>
+
+				
+
+				<div class="col hide-on-small-only m3 l2">
+					<ul class="section table-of-contents">
+						<li><a href="#R1">案例研究</a></li>
+						<li><a href="#R2">韓國網路文化與社會環境</a></li>
+						<li><a href="#R3">台灣網路文化與社會環境</a></li>
+						<li><a href="#R4">網路公審的起因與影響</a></li>
+						<li><a href="#R5">為何要使用網路公審的方式報復探討</a></li>
+						<li><a href="#R6">傳統形式的霸凌與新型的霸凌</a></li>
+						<li><a href="#R7">網路使用的主要群體及網路霸凌情形</a></li>
+						<li><a href="#R8">被霸凌者的心理分析</a></li>
+						<li><a href="#R9">結論</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+
+
+
+		<footer class="page-footer teal">
+			<div class="container">
+				<div class="row">
+					<div class="col l6 s12">
+						<h5 class="white-text">Researchers team</h5>
+						<p class="grey-text text-lighten-4">We are not only high school students but also researchers.</p>
+
+					</div>
+
+					<div class="col l3 s12">
+						<h5 class="white-text">研究者資訊</h5>
+						<ul>
+							<li><a class="white-text" href="#!">無松瑞 信箱 otis8496@gmail.com </a></li>
+						</ul>
+						<ul>
+							<li><a class="white-text" href="#!">十三 信箱 ssss.gladmasy@gmail.com </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="footer-copyright">
+				<div class="container"><a class="brown-text text-lighten-3" href=""><img src="images/facebook.png"></a>
+				</div>
+			</div>
+		</footer>
+		</div>
+
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY="
+		 crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+		<script type="text/javascript">
+			var active = false;
+			window.onscroll = function() {
+				myFunction()
+			};
+
+			function myFunction() {
+				var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+				var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				var scrolled = (winScroll / height) * 100;
+				document.getElementById("myBar").style.width = scrolled + "%";
+			}
+
+			$(document).ready(function() {
+				$("#more").click(function() {
+					$("#in").toggle();
+					$(".dropdown-button").dropdown();
+					if (!active) {
+						anime({
+							targets: '#more',
+							rotate: {
+								value: 180,
+								duration: 200,
+								easing: 'easeInOutSine'
+							},
+						});
+						active = true;
+					} else {
+						anime({
+							targets: '#more',
+							rotate: {
+								value: 360,
+								duration: 200,
+								easing: 'easeInOutSine'
+							},
+						});
+						active = false
+					}
+
+				});
+				$("#in").hide();
+			});
+
+			new Vue({
+				el: '#app',
+				data: {
+					fontsizesetting: 16,
+					fontStyle: {
+						'font-size': '16px'
+					}
+				},
+				methods: {
+					increasefontsize() {
+						this.fontStyle['font-size'] = `${this.fontsizesetting++}px`
+					},
+					decreasefontsize() {
+						this.fontStyle['font-size'] = `${this.fontsizesetting--}px`
+					}
+				}
+			})
+		</script>
+
+	</body>
+</html>
