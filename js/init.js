@@ -140,22 +140,30 @@ const Home = {
 }
 
 const About = {
-	template: '<h1>價格</h1>'
+	template: `<div>
+		<div class="container">
+			<h2 class="center">關於研究者</h2>
+			<div class="center">
+				<img src="images/logo.jpg">
+				<p>透過高中生的眼睛觀察這個世界</p>
+
+			</div>
+			<p>我們是兩個高中生組成的團，對社會議題很關心的我們決定將對議題的看法發表於網路上，我們會將近期研究成果放於此網站上。</p>
+			
+		</div>
+	</div>
+	`
 }
 
 
 
 const Reference = {
-	template: '<h1>價格</h1>'
+	template: '<h1>待補</h1>'
 }
 
-
-const Questionnaire_content = {
-	template: '<h1>價格</h1>'
-}
 
 const Article = {
-	template: '<h1>自動駕駛車引發法律風暴——探討我國對自動駕駛車的法規規範</h1>'
+	template: '<h1></h1>'
 }
 
 
@@ -171,9 +179,6 @@ const routes = [
 		path:'/reference',component:Reference
 	},
 	{
-		path:'/questionnaire_content',component:Questionnaire_content
-	},
-	{
 		path:'/articles',component:Article
 	}
 ]
@@ -182,34 +187,13 @@ const router = new VueRouter({
 	routes
 })
 
-        new Vue({
-            el: '#app',
-            router,
-            data: {
-                Home: '首頁',
-                Features: '特色',
-                Pricing: '價格',
-                Disabled: '停用'
-            }
-        })
-
-	var options = {
-	  strings: ['我們是兩個高中生組成的團隊。'],
-	  typeSpeed: 70
-	};
-	
-	var typed = new Typed('#type-text', options);
-	typed.stop();
-	
-	
-	var wow2 = new WOW(
-	  {
-		boxClass:     'wow2',
-	    callback:     function(box) {
-			typed.start();
-	    },
-	    scrollContainer: null 
-	  }
-	);
-	
-	wow2.init();
+    new Vue({
+        el: '#app',
+        router,
+        data: {
+            Home: '首頁',
+            Features: '特色',
+            Pricing: '價格',
+            Disabled: '停用'
+        }
+    })
