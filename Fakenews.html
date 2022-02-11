@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+		<title>「言論自由」下的亂象─假新聞與訊息傳播概況研究</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous"></link>
+	</head>
+	<style type="text/css">
+
+	body{
+		font-family: 'Noto Sans TC', sans-serif;
+	}
+	
+	
+	p{
+		font-size: 1.25rem;
+		line-height: 2rem;
+	}
+	
+	nav ul a,
+	nav .brand-logo {
+	  color: #444;
+	}
+
+	.button-collapse {
+	  color: #26a69a;
+	}
+	
+	#in{
+		border-color: rgb(255, 250, 212) transparent rgb(255, 250, 212) transparent;
+		border-width:2px;
+		border-style:solid;
+	}
+	
+	#Introduction{
+		color: white;
+		padding: 2.1875rem;
+	}
+	
+	#type-text{
+		display:inline;
+	}
+
+	.typed-cursor{
+		font-size: 2.25rem;
+	}
+
+	.parallax-container {
+	  min-height: 380px;
+	  line-height: 0;
+	  height: auto;
+	  color: rgba(255,255,255,.9);
+	}
+	.parallax-container .section {
+		width: 100%;
+	  }
+
+	@media only screen and (max-width : 992px) {
+	  .parallax-container .section {
+		position: absolute;
+		top: 40%;
+	  }
+	  #index-banner .section {
+		top: 10%;
+	  }
+	}
+
+	@media only screen and (max-width : 600px) {
+	  #index-banner .section {
+		top: 0;
+	  }
+	}
+
+	.icon-block {
+	  padding: 0 15px;
+	}
+	.icon-block .material-icons {
+	  font-size: inherit;
+	}
+
+
+	.carousel-item{
+		width: 450px !important;
+	}
+
+	.section-1{
+		background-color: rgb(166, 122, 68);
+		padding-top:3.125rem;
+	}
+
+	.section-2{
+		background-color: rgb(223, 223, 223);
+		padding-top:3.125rem;
+	}
+
+	.small-img{
+		max-width: 31.25rem;
+	}
+
+	footer.page-footer {
+	  margin: 0;
+	}
+
+	.chip-two{
+		background-color: #a67a44;
+	} 
+
+	.chip-one{
+		background-color: #dfdfdf;
+	} 
+	
+	.typing{
+	font-size: 1rem;
+	padding-top: 6%;
+	margin-bottom: 5%;
+	font-weight: normal;
+	letter-spacing: .3rem;
+	-webkit-animation: type 2s steps(50, end) forwards;
+	animation: type 2s steps(50, end) forwards;
+	}
+	
+	.typing-item{
+	text-align: center;
+	color: black;
+	width:100%;
+	white-space:nowrap;
+	overflow:hidden;
+	}
+	@-webkit-keyframes type{
+	from { width: 0;}
+	}
+	@keyframes type{
+	from { width: 0;}
+	}
+	
+	.fontSIZE:link,
+	.fontSIZE:visited{
+		display:inline-block;
+		text-decoration:none;
+		text-align:center;
+		height:30px;
+		width:30px;
+		color:black;
+		background-color:white;
+		border:1px solid green;
+	}
+	.fontSIZE:hover,
+	.fontSIZE:active{
+		color:white;
+		background-color:green;
+	}
+		
+	</style>
+	<body>
+		<ul id="dropdown1" class="dropdown-content">
+		  <li><a href="#!">網路公審與霸凌</a></li>
+		  <li class="divider"></li>
+		  <li><a href="#!">自駕車事故</a></li>
+		  <li class="divider"></li>
+		  <li><a href="#!">居住正義	</a></li>
+		  <li class="divider"></li>
+		  <li><a href="#!">假訊息</a></li>
+		</ul>
+		
+		<nav class="white" role="navigation">
+		 <div class="nav-wrapper container">
+		   <a id="logo-container" class="brand-logo center" href="index.html">Researchers</a>
+			        <ul id="nav-mobile" class="left hide-on-med-and-down">
+			          <li><a href="#" @click="$router.push('articles')">關於我們</a></li>
+			          <li><a href="#" @click="$router.push('reference')">引用資料</a></li>
+			          <li><a href="https://twyaya.github.io/self-driving-cars/" >問卷內容</a></li>
+			        </ul>
+					<ul class="right hide-on-med-and-down">
+							<li><a class="dropdown-button" href="#!" data-activates="dropdown1">專題<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+		    </div>
+			<div class="progress-container">
+				<div class="progress-bar" id="myBar"></div>
+			</div>	
+		 </nav>
+		 
+		
+		<br><br>
+		<div  id="app" class="container">
+			 <div class="row">
+				 
+			    <div class="col s12 m9 l10">
+			      <div id="introduction" class="section scrollspy">
+			        <h3>「言論自由」下的亂象─假新聞與訊息傳播概況研究</h3>
+					<br>
+					  <div class="chip chip-two">
+					    法律
+					  </div>
+					  
+					<div class="actor right">
+						<div>
+						  <a class="fontSIZE waves-effect waves-light btn" herf='#' @click='decreasefontsize'>A-</a>
+						  <a class="fontSIZE waves-effect waves-light btn" herf='#' @click='increasefontsize'>A+</a>
+						</div>						
+						  <i>作者:十三、無松瑞</i>
+					  </div>
+					  
+						  <div class="fixed-action-btn toolbar">
+							<a class="btn-floating btn-large red">
+							  <i class="large material-icons">menu</i>
+							</a>
+							<ul>
+							  <li class="waves-effect waves-light"><div class="fb-share-button" data-href="https://twyaya.github.io/resercher/Fakenews.html" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftwyaya.github.io%2Fresercher%2FFakenews.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><i class="fas fa-share-square"></i></a></div></li>
+							  <li class="waves-effect waves-light green"><a href="#!"><i class="fas fa-share-square"></i></a></li>
+							  <li class="waves-effect waves-light red"><a href="#!"><i class="material-icons">publish</i></a></li>
+							  <li class="waves-effect waves-light yellow"><a href="#!"><i class="material-icons">attach_file</i></a></li>
+							</ul>
+						  </div>			  								    
+			      </div>
+				  <p>
+				  <hr>
+				
+					<div v-bind:style='fontStyle'>
+						
+					  <div id="R1" class="mb-0 section scrollspy">	
+						<div>
+							
+						
+							<p v-bind:style='fontStyle'>在網路與言論自由風氣盛行的情況下，大量虛偽不實的訊息在網路上散布，我們想深入研究現在的網路環境與假訊息的傳播概況。</p>
+							<h4>一、案例研究</h4>
+							<br>
+							<h5>（一）台灣駐日外交官之死─利用災難事件應對散佈不實訊息</h5>
+							<p v-bind:style='fontStyle'>2018年9月，時任台灣駐大阪辦事處處長蘇啟誠在官邸自殺身亡，當時正值大阪風災，網絡上流傳中國駐大阪總領事館人員安排中國遊客離開機場的消息，令台灣駐大阪辦事處飽受批評救援不力，疑似因為受到不實訊息誤導民眾而遭受攻擊，承受極大壓力。</p>
+							<p v-bind:style='fontStyle'>PTT上流傳中國駐大阪領事館，特別調派專車前往關西機場內，救出滯留一夜的中國旅客，只要台籍旅客承認自己是中國人就能搭車，許多網友在討論區辱罵外交官的無能及怠惰，事後被關西機場、外交部證實為假消息。</p>
+							<h5>（二）衛生紙之亂─發布衛生紙將大漲的不實訊息</h5>
+							<p v-bind:style='fontStyle'>2018年2月23日，知名量販業者為了促銷自家衛生紙，促進衛生紙特賣銷售檔期的業績，以電子郵件與即時通訊軟體向媒體發送「衛生紙確定大漲30％，賣場業績急飆5倍」的訊息，指稱衛生紙近期將會大漲，且指稱「調漲時間點最快落在三月中旬，最慢4月
+							前必漲」，並以廣泛性的指稱：「叫得出名字」的品牌衛生紙會調漲，讓收到訊息者自行推論認為大多數衛生紙品牌都會調漲。</p>
+							<p v-bind:style='fontStyle'>當天中午兩家知名新聞媒體均根據該公司所提供之資訊進行新聞報導，之後各新聞媒體陸續跟進，當天晚上各家電視媒體均已加入報導行列，民眾在聽聞消息之後，開始進行搶購。</p>					</p>
+							
+							<h4>二、假訊息的特點</h4>	
+							<br>
+							<h5>（一）、假訊息的共同點</h5>
+							<p v-bind:style='fontStyle'>調查了網路上散佈的假訊息的共同點，發下以下的情形:
+
+							<p v-bind:style='fontStyle'>	1.過於誇張、聳動或含糊不清的標題</p>
+							<p v-bind:style='fontStyle'>	2.新聞內容出現許多錯字或網站版面編排不正常</p>
+							<p v-bind:style='fontStyle'>	3.含有不完整的影片、照片</p>
+							<p v-bind:style='fontStyle'>	4.未註明發布日期、作者、消息來源或相關資料</p>
+
+							<p v-bind:style='fontStyle'>第一項特徵在關於政治人物和明星的訊息最容易出現，例如:XX在知名飯店與知名藝人密會，其中誇張、聳動的標題大致是為了吸引注意，而含糊不清的標題，最常出現在所謂的「農場文」中，與避免閱讀者看完訊息後，對訊息的內容不實感到失望，透過這種方法還可能在被追究責任時利用「沒有任意斷言事實」的理由辯解。</p>
+
+							<p v-bind:style='fontStyle'>第二項常出現在釣魚網站和惡質新聞媒體，釣魚網站為了吸引使用者拜訪網頁，會在網站內容增添許多假訊息當作誘餌，吸引使用者，惡質的新聞媒體為了自身利益大都會用不實訊息毀謗立場相左者，在美國總統大選期間有大量的假訊息散佈在影音網站上，毀謗當時的美國政府，聲稱「桑迪•胡克小學槍擊案」是政府為了推行槍枝管制而操演的大戲，也曾指控911事件是由美國政府策畫。</p>
+
+							<p v-bind:style='fontStyle'>第三項在許多網站上為了試圖取得閱聽人的信任，會放上許多畫質不清、不合理扭曲或修正過頭的圖片，訊息發布者的想法是「有圖為證，總是會信的吧」，也常出現在報章雜誌上，因為現行得相片編輯技術非常成熟，導致許多民眾誤信圖片訊息，可能繼續以訛傳訛散佈訊息，所以對於假訊息下的受害者殺傷力最為嚴重。</p>
+
+							<p v-bind:style='fontStyle'>第四項多數的假訊息跟本沒有根據，也有許多訊息是在其他文章標竊而來，訊息的散佈者也不會標註資料來源，大都出現在知識型、藝術型的著作中，常用此方法騙取流量，賺取廣告費用，以下為一則假訊息的內容:</p>
+					  </div>
+					  </div>
+				  </div>
+				<div>
+					<span style="font-style:italic;color:#cb8c1e">"「急件 ！請轉給你的女兒，兒子，老婆，丈夫，朋友，和身邊所有的人及朋友緊急通知：各位朋友請注意，即日起不可食用泰國製之各類罐頭食品，包含臺灣品牌泰國生産者，尤其是泰國罐裝水果食品。泰國200多名愛滋病感染者在患者的首腦的指揮下湧進泰國各家罐頭食品廠裡用自己的毒血滴到罐頭。此事今天早晨已被泰國政府衛生部證實，為了避免人民食用受感染，泰國超市有多款式罐頭已經全面下架。例如：菱芝，紅毛丹，馬駘，龍眼，芒果布丁等等，收到後馬上發給你關心的人。」 (經該署洽請我國駐泰國代表處經濟組查證，並未有此事)"
+					</span><br>
+				</div>
+					<p>分析內容後會發現此訊息有幾點特色，以發生「緊急危險」的標題吸引目光與讓讀者慌張，降低其判斷能力，文章開頭部分過於聳動，但為了增加真實性，文章後半部則呈現具體詳細的內容，最後以「泰國政府衛生部」「為了避免......全面下架」等較為專業的字眼，取得讀者對於訊息來源的信任，文章尾端「收到後馬上發給你關心的人」利用讀者的謊張與關心親朋好友的心意，以此方式傳播不實訊息。</p>
+	
+			      <div id="R2" class="section scrollspy">
+					<h4>三、不實訊息的查證</h4>
+					<br>
+			        <h5>（一）、民眾對於不實訊息的查證狀況分析 </h5>
+			        <p v-bind:style='fontStyle'>當民眾隨手拿起手機，打開社群軟體，各種訊息撲面而來，其中不管是基於甚麼原因假訊息的內容，就潛藏在其中，只要不對這些訊息採取應對手段，遲早會將假訊息傳播到信以為真的人眼中，而要解決此問題的最簡單作法是「查證」，根據圖一中的數據，看出大部分的民眾對於訊息的查證是利用網路，但這項作法最大的問題是當網路上的虛假訊息早已被盲目的群眾散佈出去，即便透過查看教具公信力的社群軟體、新聞媒體、網路論壇，還是很在當下找到事實真相，從衛生紙之亂的事件中已經透漏出不實訊息的傳播速度，另外圖一中50歲以上的老人對於資訊的查證率遠低於青壯年，加深了我對老人的真假訊息判斷能力的質疑。</p>
+			      </div>				  			
+				
+				<div class="row">
+					  <div class="col s12 m7">
+					    <div class="card">
+					      <div class="card-image">
+					        <img class="materialboxed" src="images/fakenwes.png" data-caption="車禍現場照片 資料來源：美聯社">
+					      </div>
+					      <div class="card-content">
+					        <p>各世代網路族網路訊息真實性查證情形</p>							
+					      </div>
+					      <div class="card-action">
+					        <a href="#">資料來源：國發會</a>
+					      </div>
+					    </div>
+					  </div>
+				</div>
+					
+			      <div id="R3" class="section scrollspy">
+					<h4>四、不實訊息的規範</h4>
+					<br>
+			        <h5>(一)假訊息的相關法規</h5>
+					<p v-bind:style='fontStyle'>	網路散布假新聞、假消息，刑事責任部分，可能構成刑法第310條毀謗罪、第309條公然侮辱罪、第151條恐嚇公眾罪、第153條煽惑他人犯罪或違背法令罪等，而公職人員選舉罷免法第104條尚有意圖使人當選或不當選而誹謗罪等等。雖刑法誹謗罪即第310條第3項前段規定對於所誹謗之事能證明其為真實者不罰，惟依司法院釋字第509號解釋，行為人至少要提出證據資料有相當理由確信其為真實者，始不能以誹謗罪之刑責相繩。</p>
+					<p v-bind:style='fontStyle'>	民法第195條第1項規定，不法侵害他人之身體、健康、名譽、自由、信用、隱私、貞操，或不法侵害其他人格法益而情節重大者，被害人雖非財產上之損害，亦得請求賠償相當之金額。其名譽被侵害者，並得請求回復名譽之適當處分。準此，網路散布假新聞、假消息，若符合前述規定，自得請求賠償，而其名譽被侵害者亦得請求回復名譽之處分。</p>
+					<p v-bind:style='fontStyle'>	而民法上名譽權之侵害，應以社會上對個人評價是否貶損作為判斷之依據(參見最高法院90年台上字第646號民事判例)，其賠償應斟酌雙方身分資力與加害程度，及其他各種情形核定相當之數額(參見最高法院51年台上字第223號民事判例)。</p>
+					<p v-bind:style='fontStyle'>	散布謠言，足以影響公共之安寧者，可依社會秩序維護法第63條第1項第5款規定處3日以下拘留或新臺幣3萬元以下罰鍰。(立法院)</p>
+					<p v-bind:style='fontStyle'>	目前的相關法規制定完備但限於「明顯侵害他人的聲譽及安全」，未來可能制定的假訊息罰則，相比可能造成的傷害也是很難達到嚇阻的作用。</p>
+					
+					<span style="font-style:italic;color:#cb8c1e">
+					<p v-bind:style='fontStyle'>刑法 第 310 條</p>
+					意圖散布於眾，而指摘或傳述足以毀損他人名譽之事者，為誹謗罪，處一年以下有期徒刑、拘役或一萬五千元以下罰金。散布文字、圖畫犯前項之罪者，處二年以下有期徒刑、拘役或三萬元以下罰金。對於所誹謗之事，能證明其為真實者，不罰。但涉於私德而與公共利益無關者，不在此限"
+					</span><br>
+					<span style="font-style:italic;color:#cb8c1e">
+					<p v-bind:style='fontStyle'>刑法 第 309 條</p>
+					公然侮辱人者，處拘役或九千元以下罰金。
+					以強暴犯前項之罪者，處一年以下有期徒刑、拘役或一萬五千元以下罰金。					
+					</span>
+					<br>
+			        <br>
+					<span style="font-style:italic;color:#cb8c1e">
+					<p v-bind:style='fontStyle'>刑法 第 151 條</p>
+					第 151 條
+					以加害生命、身體、財產之事恐嚇公眾，致生危害於公安者，處二年以下有期徒刑。				
+					</span><br>
+						
+			      </div>
+				  
+				  
+				  <div id="R4" class="section scrollspy">
+			        <h5>(二)假訊息的防治與立法</h5>
+					<p>為了防治假訊息的散佈，單憑現行的法規無法有效制止，所以行政院表示，為防杜散播假訊息造成危害，內政部、農委會、衛福部、原能會預計修正6個法案，包括《災害防救法》、《糧食管理法》、《農產品市場交易法》、《傳染病防治法》、《食品安全衛生管理法》、《核子事故緊急應變法》，在法案中納入禁止散播假新聞的規範和罰則。</p>
+				<div class="row">
+					<div class="col s12 m7">
+					    <div class="card">
+					      <div class="card-image">
+					        <img class="materialboxed" src="images/unnamed.png" data-caption="防堵假新聞修法內容 資料來源:行政院">
+					      </div>
+					      <div class="card-content">
+					        <p>防堵假新聞修法內容</p>							
+					      </div>
+					      <div class="card-action">
+					        <a href="#">資料來源:行政院</a>
+					      </div>
+					    </div>
+					</div>
+				</div>					
+					<p v-bind:style='fontStyle'>假訊息的定義上，有個極大的問題，就是在於「故意散佈假訊息」的定義，如果只是民眾誤信訊息進而散佈給其他人，不符合構成要件，對於假新聞的定義，行政院表示「出於惡意、製造假的、造成危害」的訊息會有法律規制跟問責的必要性，但有個很重要的基本原則就是不可以傷害到言論自由，可見現行的立法被維護言論自由的基礎下限制住了，即便未來通過這幾項法案，對於能否有效制止假訊息散佈及危害，還是有待觀察。追查假訊息的困難是要面對的第二個大問題，所以警政署成立「查緝假消息專責小組」，負責查處網路假訊息案件，最大部分的假訊息出現時間是在總統大選期間，包含散佈關於豬瘟疫情、不實立法訊息、造假言論等，PTT上的許多網友的主機IP被查到來源在於中國，共通性是都發布碰擊現行政府的訊息與言論，其中充斥不少惡意毀謗、製造動亂等不實訊息。</p>
+					<h5>(三)各國的假訊息防治與立法</h5>
+					<p v-bind:style='fontStyle'>德國通過《網路執行法》，勒令社交平台業者，須自行檢查、刪除違法「仇恨言論」，今年進一步加強執法力度，除臉書、推特等龍頭業者屬執法重點外，Reddit、Tumblr等社群平台，甚至是俄羅斯社群網站VKontakte，也被鎖定為重要執法對象，若未能即時刪除違法言論，都將面臨最高17.5億元台幣的巨額罰款。</p>
+					<p v-bind:style='fontStyle'>德國針對國內的知名的社群軟體平台，嚴格限制內容的合法性，所謂的仇恨言論的標準則帶來許多爭議，所以採取較不明顯的惡意言論由社群軟體公司在七天時間下自行判斷，《網路執行法》也要求社群軟體公司必須建立更簡潔的通報系統，而為了在執法一段時間後檢視成效，社群媒體公司也必須每半年發表一份報告，說明他們收到多少申報案件並如何處理，對於屢屢失責的公司最高將會面臨5千萬歐元的罰款，公司相關負責人則最高處以5百萬歐元的罰款。(台灣新社會智庫)</p>
+					<p v-bind:style='fontStyle'>法國在 2018 年通過兩部《反資訊操縱法》草案，一部是作用法，一部是組織法，意在加強監管社交通訊平台在法國選舉期間假資訊的擴散、要求數位平台業者公布其演算法和投放政治相關廣告的出資者身份，以及授權最高視聽委員會（CSA）在選舉期間中止故意散播假新聞來影響選舉結果的數位平台服務。</p>
+					<p v-bind:style='fontStyle'>法國的假訊息數量增加最高峰跟我國都是在大選期間，所以也立法限制針對「政治攻擊」目的之假訊息，不管是在亞洲還是歐洲，假訊息以開始成為偏激攻擊者的工具，試圖用各種方法製造社會動亂，但這並非是傳播媒體高度發展下的產物而是民眾盲目缺乏判斷力的後果。
+				<div class="row">
+						<div class="col s12 m7">
+						    <div class="card">
+								<div class="card-image">
+									<img class="materialboxed" src="images/Untitled Diagram.png" data-caption="政府對於假訊息的對策 資料來源:研究者自行繪製">
+								</div>
+								<div class="card-content">
+									<p>政府對於假訊息的對策</p>							
+								</div>
+								<div class="card-action">
+									<a href="#">資料來源:研究者自行繪製</a>
+								</div>
+							</div>
+						</div>
+				</div>					
+					<p v-bind:style='fontStyle'>兩國對於假訊息的處置皆是從平台業者自主管理到立法嚴格限制，可見假訊息的散佈單靠業者自行審查機制，根本無法有效遏止，即便立法通過了關於執行此法律內容會不會有侵害「言論自由」的爭議，是許多民眾關心的地方。
+					<p v-bind:style='fontStyle'>新加坡通過的假新聞相關法案，也特別針對網路上的不實訊息進行限制，其中賦予政府部會有權下令像臉書（Facebook）及推特（Twitter）等社群媒體網站在當局認為有誤的貼文旁放置警告，而在極端的例子中，甚至能要求下架。
+					<p v-bind:style='fontStyle'>新加玻自建國後，人民行動黨一直是唯一的執政黨（一黨獨大狀態），在議會中也鮮少有能夠形成監督力量的反對黨（部份反對黨成員是被委任，以免議會裡100%的意見都是支持人民行動黨，議會在1991年改變選舉制度後設有反對黨的保障名額，最多有9席），因為權力幾乎被一黨掌握，所以對於新的法案是否更加強人民行動黨對於國家的控制飽受民眾與人權團體批評。								        
+				  </div>	
+				
+				<div  id="R5" class="section scrollspy">
+					<h5>(四)聯合國的言論自由</h5>												
+					<p v-bind:style='fontStyle'>聯合國1948年通過的《世界人權宣言》中的第十九條以及《公民權利和政治權利國際公約》第十九條明確提出了「言論自由」的定義。</p>
+					<p v-bind:style='fontStyle'>	《世界人權宣言》中的第十九條指：			
+					<p v-bind:style='fontStyle'>	人人有主張及發表自由之權；此項權利包括保持主張而不受干涉之自由，及經由任何方法不分國界以尋求、接收並傳播消息意見之自由。</p>						
+					<p v-bind:style='fontStyle'>	《公民權利和政治權利國際公約》第十九條指：</p>																																				
+					<p v-bind:style='fontStyle'>	一、人人有保持意見不受干預之權利。</p>
+					<p v-bind:style='fontStyle'>	二、人人有發表自由之權利；此種權利包括以語言、文字或出版物、藝術或自己選擇之其他方式，不分國界，尋求、接受及傳播各種消息及思想之自由。<p>
+					<p v-bind:style='fontStyle'>	三、本條第二項所載權利之行使，附有特別責任及義務，故得予以某種限制，但此種限制以經法律規定，且為下列各項所必要者為限：</p>
+					<p v-bind:style='fontStyle'>	（一）尊重他人權利或名譽；</p>
+					<p v-bind:style='fontStyle'>	（二）保障國家安全或公共秩序，或公共衛生或風化。</p>
+					<p v-bind:style='fontStyle'>要有個確切的言論自由定義才能探討「假訊息的法律規定是否過度限制言論自由」，如果是為了制止假訊息帶來不當損害，的確是有限制的必要性。</p>
+					<p v-bind:style='fontStyle'>反對者的爭議點在執行上的困難(限制言論的疑慮)，但為保障他人的言論自由而引起眾人的假訊息散佈與不實言論惡意攻擊，損害的是更重要公眾利益，研究者認為法案執行上的疑慮，不能當作阻擋為維護群眾人身安全、隱私權、人格權而立定之法規。</p>			        
+				</div>	
+				
+				  <div id="R6" class="section scrollspy">
+				    <h5>結論</h5>
+					<p v-bind:style='fontStyle'>想要導正現今病態的傳播文化需要透過學校、家庭、媒體等，各界的努力，才能改善已扭曲的媒體使用價值觀，而媒體文化需要重新導正，各種傳播媒體應該做好內容正確真實且中立客觀的報導，民眾對於假訊息的辨別力需要再加以培養，否則假訊息的迫害的助力就是來自無知的民眾，現行的法規對於惡意訊息與假訊息的罰則過輕，即便試圖修法加重相關罰則，甚至拘留散佈者都會引起侵犯言論自由的碰擊，為了避免言論成為破壞社會秩序的武器，透過立法來限制假訊息的損害，只是最後的手段。</p>	
+					<p v-bind:style='fontStyle'>經過綜合比較及討論後，我對於台灣假訊息與假新聞的問題改善提供的建議如下：</p> 
+					<p v-bind:style='fontStyle'>一、加強嚴格審查危害社會秩序與誤導民眾的不實訊息</p>
+					<p v-bind:style='fontStyle'>二、建立起懲戒散佈不實訊息的新聞媒體之制度</p>
+					<p v-bind:style='fontStyle'>三、透過電台、報紙、網路平台等方式立即澄清不實訊息 </p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+					<p v-bind:style='fontStyle'>四、宣傳及教育民眾對於不實訊息的判斷能力</p>
+					<p v-bind:style='fontStyle'>五、各家傳播媒體對於重大訊息應進行真實性審查</p>
+				  </div>
+				  
+			    </div>
+				
+				
+			    <div class="col hide-on-small-only m3 l2">
+			      <ul class="section table-of-contents">
+			        <li><a href="#R1">案例研究</a></li>
+			        <li><a href="#R2">不實訊息的查證</a></li>
+					<li><a href="#R3">不實訊息的規範</a></li>
+					<li><a href="#R4">假訊息的防治與立法</a></li>
+					<li><a href="#R5">聯合國的言論自由</a></li>
+			        <li><a href="#R6">結論</a></li>
+			      </ul>
+			    </div>
+			  </div>
+		</div>
+		
+		
+		
+			<footer class="page-footer teal">
+			    <div class="container">
+			      <div class="row">
+			        <div class="col l6 s12">
+			          <h5 class="white-text">Researchers team</h5>
+			          <p class="grey-text text-lighten-4">We are not only high school students but also researchers.</p>
+			
+			        </div>
+					
+			        <div class="col l3 s12">
+			          <h5 class="white-text">研究者資訊</h5>
+			          <ul>
+			            <li><a class="white-text" href="#!">無松瑞 信箱 otis8496@gmail.com </a></li>
+			          </ul>
+					  <ul>
+					    <li><a class="white-text" href="#!">十三 信箱 ssss.gladmasy@gmail.com </a></li>
+					  </ul>
+			        </div>
+			      </div>
+			    </div>
+			
+					
+			    <div class="footer-copyright">
+			      <div class="container"><a class="brown-text text-lighten-3" href=""><img src="images/facebook.png" ></a>
+			      </div>
+			    </div>
+			  </footer>
+			</div>
+			
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+		<script type="text/javascript">
+			var active = false;
+			window.onscroll = function() {myFunction()};
+			
+			function myFunction() {
+			  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+			  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+			  var scrolled = (winScroll / height) * 100;
+			  document.getElementById("myBar").style.width = scrolled + "%";
+			}
+			
+			$(document).ready(function(){
+			  $("#more").click(function(){
+			    $("#in").toggle();
+				$(".dropdown-button").dropdown();
+				if (!active) {
+					anime({
+					  targets: '#more',
+					  rotate: {
+						value: 180,
+						duration: 200,
+						easing: 'easeInOutSine'
+					  },
+					});
+					active = true;
+				}
+				else{
+					anime({
+					  targets: '#more',
+					  rotate: {
+						value: 360,
+						duration: 200,
+						easing: 'easeInOutSine'
+					  },
+					});
+					active = false
+				}
+				
+			  });
+			  $("#in").hide();
+			});
+			
+        new Vue({
+            el: '#app',
+            data: {
+                fontsizesetting: 16,
+                fontStyle: {
+                    'font-size': '16px'
+                }
+            },
+            methods: {
+                increasefontsize() {
+                    this.fontStyle['font-size'] = `${this.fontsizesetting++}px`
+                },
+                decreasefontsize() {
+                    this.fontStyle['font-size'] = `${this.fontsizesetting--}px`
+                }
+            }
+        })
+			
+		</script>
+		
+	</body>
+</html>

@@ -9,6 +9,19 @@
 body{
 	font-family: 'Noto Sans TC', sans-serif;
 }
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #ffaa00;
+  width: 0%;
+}
 
 p{
 	font-size: 1.25rem;
@@ -19,12 +32,26 @@ nav .brand-logo {
   color: #444;
 }
 
+nav{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+
 p {
   line-height: 2rem;
 }
 
 .button-collapse {
   color: #26a69a;
+}
+
+#type-text{
+	display:inline;
+}
+
+.typed-cursor{
+	font-size: 2.25rem;
 }
 
 .parallax-container {
@@ -67,10 +94,12 @@ p {
 
 .section-1{
 	background-color: rgb(166, 122, 68);
+	padding-top:3.125rem;
 }
 
 .section-2{
 	background-color: rgb(223, 223, 223);
+	padding-top:3.125rem;
 }
 
 .small-img{
@@ -110,35 +139,4 @@ from { width: 0;}
 }
 @keyframes type{
 from { width: 0;}
-}
-
-span{
-	margin: 0px;
-	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
-	animation: span 3s ease-in infinite alternate;
-}
-.main{
-	display: flex;
-	justify-content: center;
-}
-.letter{
-	display: inline-flex;
-	height: 24px;
-	width: 27px;
-	/* border: 2.5px solid #FF1EAD; */
-	border: 2.35px solid black;
-	border-radius: 14px;
-	box-shadow:
-		0 0 2px rgba(0, 0, 0, .75),
-		inset 0 0 2px rgba(0, 0, 0, .45);
-
-	animation: letter 3s ease-in-out infinite alternate;
-}
-@keyframes span {
-	0%,30%{ margin: 0 15px; }
-	70%,100%{ margin: 0 5px; }
-}
-@keyframes letter {
-	0%,30%{ width: 30px; }
-	70%,100%{ width: 400px; }
 }

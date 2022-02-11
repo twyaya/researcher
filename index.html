@@ -3,243 +3,83 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>研究專題</title>
-  
-
+  <meta name="Description" content="研究者是一個追求理性公正世界的自媒體。"/>
+  <title>研究者Researchers</title>
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
+	<div id="app">
 	<ul id="dropdown1" class="dropdown-content">
 	  <li><a href="#!">網路公審與霸凌</a></li>
 	  <li class="divider"></li>
 	  <li><a href="#!">自駕車事故</a></li>
 	  <li class="divider"></li>
-	  <li><a href="#!">居住正義	</a></li>
+	  <li><a href="#!">居住正義</a></li>
 	  <li class="divider"></li>
 	  <li><a href="#!">假訊息</a></li>
 	</ul>
-  <nav class="white" role="navigation">
+   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo center">Searchers</a>
+      <a id="logo-container" class="brand-logo center" href="index.html">Researchers</a>
 	        <ul id="nav-mobile" class="left hide-on-med-and-down">
-	          <li><a href="https://diego09182.github.io/Personalwebsite/">關於我們</a></li>
-	          <li><a href="badges.html">引用資料</a></li>
-	          <li><a href="collapsible.html">相關評論</a></li>
+	          <li><a href="#" @click="$router.push('about')">關於我們</a></li>
+	          <li><a href="#" @click="$router.push('reference')">引用資料</a></li>
+	          <li><a href="https://twyaya.github.io/self-driving-cars/" >問卷內容</a></li>
 	        </ul>
 			<ul class="right hide-on-med-and-down">
-					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">專題<i class="material-icons right">arrow_drop_down</i></a></li>
+				<li><a class="dropdown-button" href="#!" data-activates="dropdown1">專題<i class="material-icons right">arrow_drop_down</i></a></li>
 			</ul>
        </div>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  
-  
+    </nav>
 
 	<br><br>
-  <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="images/judge1.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="images/person-holding-a-burning-news-paper-close-up-photography-2538122.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="images/article-5d19dbd222a8b.jpg"></a>
-    <a class="carousel-item" href="#four!"><img src="images/8500991120_25b93df38b_b.jpg"></a>
-  </div>
 	
-      
-
-<div class="section section-1">
-  <div class="container" >
-	  <div class="row">
-		  <div class="col s5">
-			<img class="small-img responsive-img" src="images/judge1.jpg">
-		  </div>
-		  <div class="col s7">
-		  		<article>
-					<h3>網路公審與霸凌</h3>
-					<p>在網路世界中的司法體制，其背後潛藏著什麼樣的人性?</p>
-				</article>
-				<div class="right-align">
-					<a class="waves-effect waves-light btn-large">閱讀內容</a>
-				</div>
-				
-				<div class="chip chip-one">
-				  法律
-				</div>
-				<div class="chip chip-one">
-				  網路
-				</div>
-					
-		  </div>
-	  </div>
-    </div>
-</div>
-
-<div class="section section-2">
-  <div class="container" >
-	  <div class="row">
-
-		  <div class="col s7">
-		  		<article>
-					<h3>言論自由之下的亂象</h3>
-					<p>假訊息?假新聞?當言論成為破壞社會秩序的武器?我們應該如何應對?</p>
-					
-				</article>
-				<div class="right-align">
-					<a class="waves-effect waves-light btn-large">閱讀內容</a>
-				</div>
-			
-			    <div class="chip chip-two">
-			      法律
-			    </div>
-				<div class="chip chip-two">
-				  人權
-				</div>
-
-		  </div>
-		  <div class="col s5">
-			<img class="small-img responsive-img" src="images/person-holding-a-burning-news-paper-close-up-photography-2538122.jpg">
-		  </div>
-	  </div>
-    </div>
-</div>
-
-<div class="section section-1">
-  <div class="container" >
-	  <div class="row">
-		  <div class="col s5">
-			<img class="small-img responsive-img" src="./images/article-5d19dbd222a8b.jpg">
-		  </div>
-		  <div class="col s7">
-		  		<article>
-					<h3>居住正義的辯駁</h3>
-					<p>無殼蝸牛運動三十年後，居住正義是否得以伸張?</p>
-				</article>
-				<div class="right-align">
-					<a class="waves-effect waves-light btn-large">閱讀內容</a>
-				</div>
-				<div class="chip chip-one">
-				  法律
-				</div>
-				<div class="chip chip-one">
-				  經濟
-				</div>
-		  </div>
-	  </div>
-    </div>
-</div>
-
-<div class="section section-2">
-  <div class="container" >
-	  <div class="row">
-
-		  <div class="col s7">
-		  		<article>
-					<h3>隱藏在自動駕駛車下的風暴</h3>
-					<p>自駕車事故頻頻發生，背後隱藏著什麼樣的危機?</p>
-				</article>
-				<div class="right-align">
-					<a class="waves-effect waves-light btn-large">閱讀內容</a>
-				</div>
-				
-				<div class="chip chip-two">
-				  法律
-				</div>
-				<div class="chip chip-two">
-				  科技
-				</div>
-				
-		  </div>
-		  <div class="col s5">
-			<img class="small-img responsive-img" src="images/8500991120_25b93df38b_b.jpg">
-		  </div>
-	  </div>
-    </div>
-</div>
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">透過普通高中生的眼睛觀察這個世界</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img  src="images/administration-ancient-architecture-art-208603.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>我們是兩個高中生組成的團隊<h4>
-          <p class="left-align light">...</p>
-        </div>
-      </div>
-
-		  <div class="main">
-		  	<span>S</span>
-		  	<span>E</span>
-		  	<span>A</span>
-			<span>R</span>
-		  	<span>C</span>
-		  	<span>H</span>
-		  	<span class="letter"></span>
-		  	<span>E</span>
-		  	<span>R</span>
-			<span>S</span>
-		  </div>
-
-    </div>
-  </div>
+	<router-view></router-view>
 
   <div align="center">
 	<div class="fb-comments"  data-href="https://twyaya.github.io/resercher/?fbclid=IwAR0tSrAU4q0ddCmLwD_2b6lgsBQCF9YHWpBgStXQ1bLr5yzVetuEHMqEe9E" data-width="" data-numposts=""></div>
  </div>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer teal brown">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Searchers team</h5>
+          <h5 class="white-text">Researchers team</h5>
           <p class="grey-text text-lighten-4">We are not only high school students but also researchers.</p>
-
-        </div>
-		
+        </div>	
         <div class="col l3 s12">
           <h5 class="white-text">研究者資訊</h5>
           <ul>
-            <li><a class="white-text" href="#!">無松瑞 信箱 otis8496@gmail.com</a></li>
+            <li><a class="white-text" href="#!">無松瑞</a></li>
           </ul>
 		  <ul>
-		    <li><a class="white-text" href="#!">十三 信箱 ssss.gladmasy@gmail.com</a></li>
+		    <li><a class="white-text" href="#!">十三</a></li>
 		  </ul>
         </div>
       </div>
-    </div>
-		
+    </div>	
     <div class="footer-copyright">
-      <div class="container"><a class="brown-text text-lighten-3" href=""><img src="images/facebook.png" ></a>
+      <div class="container">
+		  <p class="center-align">Made by <a class="orange-text text-lighten-3" href="http://www.materializecss.cn">Materialize</a></p>
       </div>
     </div>
   </footer>
-
-
-  <!--  Scripts-->
-		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="js/materialize.js"></script>
-		<script src="js/init.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v6.0"></script>
-  </body>
+</div>
+<!--  Scripts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js" integrity="sha256-kRbW+SRRXPogeps8ZQcw2PooWEDPIjVQmN1ocWVQHRY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v6.0"></script>
+<script src="js/init.js"></script>
+</body>
 </html>

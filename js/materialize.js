@@ -7776,7 +7776,3 @@ Picker.extend( 'pickadate', DatePicker )
       }
     }; // Plugin end
 }( jQuery ));
-
-  $(document).ready(function(){
-    $('.scrollspy').scrollSpy();
-  });
